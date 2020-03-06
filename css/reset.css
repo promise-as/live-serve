@@ -1,0 +1,16 @@
+body, ul{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+input{
+  border: none;
+  outline: none;
+}
+input, ul{
+  padding: 0;
+}
+li{
+  list-style: none;
+}
