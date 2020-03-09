@@ -39,6 +39,11 @@ select {
   justify-content: space-around;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 // index.html
 .live-head {
   padding: pr(15px) pr(30px);
@@ -86,7 +91,7 @@ select {
 .live-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: pr(20px);
+  padding-top: pr(30px);
   li {
     width: 25%;
     margin-bottom: pr(10px);
@@ -111,7 +116,13 @@ select {
 }
 
 // mobile-rechage.html
-.mobile-head {
+.mobile-wrap,
+.affirm-wrap,
+.sussess-wrap {
+  height: 100%;
+  position: relative;
+}
+.headline {
   padding: pr(20px) pr(30px);
   @extend .space-between;
   border-bottom: 1px solid #f0f2f5;
@@ -121,7 +132,7 @@ select {
     background: url(../images/return.png) no-repeat;
     background-size: 100% 100%;
   }
-  .head-title {
+  .text {
     font-size: pr(36px);
     font-weight: bold;
     color: rgba(33, 33, 33, 1);
@@ -133,6 +144,13 @@ select {
     color: rgba(33, 33, 33, 1);
     line-height: pr(34px);
   }
+  .query {
+    display: inline-block;
+    width: pr(36px);
+    height: pr(36px);
+    background: url(../images/query.png) no-repeat;
+    background-size: 100% 100%;
+  }
 }
 .mobile-number {
   margin: 0 pr(30px);
@@ -143,12 +161,12 @@ select {
     width: 60%;
     input {
       width: 100%;
-      font-size: pr(60px);
+      font-size: pr(48px);
       line-height: pr(60px);
-      font-weight: bold;
-      color: rgba(33, 33, 33, 1);
+      font-weight: 400;
     }
     .hint {
+      display: none;
       font-size: pr(30px);
       font-weight: 500;
       color: rgba(153, 153, 153, 1);
@@ -174,12 +192,11 @@ select {
 }
 .mobile-charge {
   padding: 0 pr(30px);
-
   .integer {
     padding: pr(30px) 0;
     display: flex;
     flex-wrap: wrap;
-    margin-right: pr(-40px);
+    margin-right: pr(-20px);
     li {
       width: pr(207px);
       height: pr(130px);
@@ -204,6 +221,16 @@ select {
         font-weight: 500;
         color: rgba(153, 153, 153, 1);
       }
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+      &.sel {
+        border: pr(2px) solid rgba(88, 149, 255, 1);
+        .money,
+        .discount {
+          color: rgba(88, 149, 255, 1);
+        }
+      }
     }
   }
 }
@@ -220,12 +247,158 @@ select {
     font-weight: 500;
     color: rgba(153, 153, 153, 1);
     line-height: pr(32px);
-    .icon{
+    span,
+    .icon {
       display: inline-block;
+      vertical-align: middle;
+    }
+    .icon {
       width: pr(15px);
       height: pr(28px);
       background: url(../images/icon_1.png) no-repeat;
       background-size: 100% 100%;
     }
+  }
+}
+.mobile-footer {
+  text-align: center;
+  color: #ccc;
+  position: absolute;
+  bottom: pr(30px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  .item {
+    font-size: pr(24px);
+    line-height: pr(32px);
+    font-weight: 500;
+    color: rgba(88, 149, 255, 1);
+    padding: 0 pr(10px);
+  }
+}
+
+// affirm.html
+.affirm-sum {
+  padding: pr(70px) 0;
+  font-size: pr(60px);
+  line-height: pr(34px);
+  font-weight: bold;
+  color: rgba(33, 33, 33, 1);
+  text-align: center;
+}
+.affirm-orderinfo {
+  margin-bottom: pr(30px);
+  padding: 0 pr(30px);
+  font-size: pr(30px);
+  line-height: pr(32px);
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  .num {
+    color: #6199f0;
+  }
+}
+.affirm-payment {
+  padding: 0 pr(30px);
+  .list {
+    padding-top: pr(16px);
+    li {
+      @extend .space-between;
+      margin-bottom: pr(40px);
+      img {
+        width: pr(80px);
+        height: pr(80px);
+      }
+      .item-l {
+        display: flex;
+      }
+      .text {
+        padding-left: pr(30px);
+        font-size: pr(32px);
+        line-height: pr(80px);
+        font-weight: 500;
+        color: rgba(33, 33, 33, 1);
+        em {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+.affirm-submit {
+  width: pr(600px);
+  height: pr(80px);
+  line-height: pr(40px);
+  font-size: pr(36px);
+  background: rgba(54, 153, 255, 1);
+  border-radius: pr(4px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  bottom: pr(30px);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// rechage-success.html
+.sussess-wrap {
+  background: rgba(246, 246, 246, 1);
+}
+.success-head {
+  padding: pr(24px) pr(30px);
+  font-size: pr(36px);
+  line-height: pr(36px);
+  font-weight: bold;
+  color: rgba(33, 33, 33, 1);
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid #f0f2f5;
+  .finish {
+    font-size: pr(30px);
+    color: rgba(88, 149, 255, 1);
+    position: absolute;
+    right: pr(30px);
+  }
+}
+.success-query {
+  padding: pr(30px) 0;
+  font-size: pr(24px);
+  line-height: pr(32px);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 1);
+  text-align: center;
+  .text {
+    color: rgba(88, 149, 255, 1);
+  }
+}
+
+// flow.html
+.flow-privilege {
+  padding: 0 pr(30px);
+  @extend .space-between;
+  .privilege-l {
+    .price {
+      font-size: pr(36px);
+      line-height: pr(36px);
+      font-weight: bold;
+      color: rgba(88, 149, 255, 1);
+      margin-right: pr(20px);
+    }
+    .sale {
+      width: pr(59px);
+    }
+  }
+  .buy {
+    padding: 0 pr(15px);
+    height: pr(48px);
+    line-height: pr(48px);
+    background: rgba(54, 153, 255, 1);
+    border-radius: pr(3px);
+    font-size: pr(30px);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
   }
 }

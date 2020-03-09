@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -9,59 +10,96 @@
   <link rel="stylesheet" href="css/index.css" />
   <title>话费充值</title>
 </head>
+
 <body>
-  <div class="mobile-head">
-    <a href="" class="return"></a>
-    <span class="head-title">充值中心</span>
-    <a href="" class="log">充值记录</a>
-  </div>
-  <div class="mobile-number">
-    <div class="rec-input">
-      <input type="text" value="13809735212" id="phone" maxlength="11">
-      <span class="hint">默认号码(广东移动)</span>
+  <div class="mobile-wrap">
+    <div class="headline">
+      <a href="" class="return"></a>
+      <span class="text">充值中心</span>
+      <a href="" class="log">充值记录</a>
     </div>
-    <a href="" class="contacts"></a>
-  </div>
-  <div class="mobile-inquire">
-    <a href="" class="balance">查询余额</a>
-  </div>
-  <div class="mobile-charge">
-    <div class="mobile-bar">
-      <span class="bar-title">充话费</span>
+    <div class="mobile-number">
+      <div class="rec-input">
+        <input type="text" id="phone" maxlength="11" placeholder="请输入手机号码">
+        <span class="hint">默认号码(广东移动)</span>
+      </div>
+      <a href="" class="contacts"></a>
     </div>
-    <ul class="integer">
-      <li>
-        <span class="money">10元</span>
-        <span class="discount">售价:9.98</span>
-      </li>
-      <li>
-        <span class="money">20元</span>
-        <span class="discount">售价:19.98</span>
-      </li>
-      <li>
-        <span class="money">30元</span>
-        <span class="discount">售价:29.98</span>
-      </li>
-      <li>
-        <span class="money">50元</span>
-        <span class="discount">售价:49.98</span>
-      </li>
-      <li>
-        <span class="money">100元</span>
-        <span class="discount">售价:99.98</span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="mobile-bar">
-    <span class="bar-title">更多充值</span>
-
-    <a href="" class="all">
-      全部<i class="icon"></i>
-    </a>
+    <div class="mobile-inquire">
+      <a href="" class="balance">查询余额</a>
+    </div>
+    <div class="mobile-charge">
+      <div class="mobile-bar">
+        <span class="bar-title">充话费</span>
+      </div>
+      <ul class="integer">
+        <li class="sel">
+          <span class="money">10元</span>
+          <span class="discount">售价:9.98</span>
+        </li>
+        <li>
+          <span class="money">20元</span>
+          <span class="discount">售价:19.98</span>
+        </li>
+        <li>
+          <span class="money">30元</span>
+          <span class="discount">售价:29.98</span>
+        </li>
+        <li>
+          <span class="money">50元</span>
+          <span class="discount">售价:49.98</span>
+        </li>
+        <li>
+          <span class="money">100元</span>
+          <span class="discount">售价:99.98</span>
+        </li>
+      </ul>
+    </div>
+    <div class="live-card">
+      <div class="mobile-bar">
+        <span class="bar-title">更多充值</span>
+        <a href="" class="all">
+          <span>全部</span>
+          <i class="icon"></i>
+        </a>
+      </div>
+      <ul class="live-list">
+        <li>
+          <a href="">
+            <img src="images/filling-flow.png" alt="充流量">
+            <span>充流量</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="images/live-pay.png" alt="生活缴费">
+            <span>生活缴费</span>
+          </a>
+        </li>
+        </li>
+        <li>
+          <a href="">
+            <img src="images/broadband-rechange.png" alt="宽带中心">
+            <span>宽带中心</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="images/pastime-pay.png" alt="娱乐充值">
+            <span>娱乐充值</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-footer">
+      <a href="javascript:void(0)" class="item">话费宝</a>|
+      <a href="javascript:void(0)" class="item">联名卡</a>|
+      <a href="javascript:void(0)" class="item">自动充</a>
+    </div>
   </div>
 
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="js/index.js"></script>
 </body>
+
 </html>

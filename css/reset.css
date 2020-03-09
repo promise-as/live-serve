@@ -14,3 +14,6 @@ input, ul{
 li{
   list-style: none;
 }
+em{
+  font-style: normal;
+}

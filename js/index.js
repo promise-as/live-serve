@@ -5,8 +5,7 @@ function phoneSeparated(tel) {
   return tel;
 }
 
-$('#phone').val(phoneSeparated($('#phone').val()));
-
 $('#phone').blur(function(){
-  $('#phone').val(phoneSeparated($('#phone').val()))
+  $('#phone').val(phoneSeparated($('#phone').val()));
+  // $('#phone').val(phoneSeparated($('#phone').val()));
 })
