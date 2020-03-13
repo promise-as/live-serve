@@ -3,6 +3,11 @@ $browser-default-font-size: 75px !default;
   @return $px / $browser-default-font-size * 1rem;
 }
 
+a,
+i {
+  display: inline-block;
+}
+
 input[type="text"],
 select {
   appearance: none;
@@ -22,6 +27,14 @@ select {
     color: #999;
     font-size: inherit;
   }
+}
+
+@mixin ells($row) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
 }
 
 // 垂直居中，两端对齐
@@ -377,9 +390,14 @@ body {
 
 // flow.html
 .flow-privilege {
-  padding: 0 pr(30px);
+  padding: 0 pr(30px) pr(30px);
   @extend .space-between;
   .privilege-l {
+    font-size: pr(22px);
+    line-height: pr(34px);
+    li {
+      margin: pr(10px) 0;
+    }
     .price {
       font-size: pr(36px);
       line-height: pr(36px);
@@ -389,6 +407,19 @@ body {
     }
     .sale {
       width: pr(59px);
+    }
+    .scope {
+      display: inline-block;
+      padding: pr(6px) pr(8px);
+      background: rgba(54, 153, 255, 1);
+      border-radius: pr(3px);
+      color: #fff;
+    }
+    .deadline {
+      color: rgba(33, 33, 33, 1);
+    }
+    .ticket {
+      color: rgba(240, 40, 31, 1);
     }
   }
   .buy {
@@ -401,4 +432,127 @@ body {
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
   }
+}
+
+// record.html
+.record {
+  background: rgba(246, 246, 246, 1);
+}
+.record-title {
+  padding: pr(20px) pr(30px);
+  border-bottom: 1px solid #f0f2f5;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  .return {
+    width: pr(18px);
+    height: pr(34px);
+    background: url(../images/return.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: pr(30px);
+  }
+  .text {
+    font-size: pr(36px);
+    font-weight: bold;
+    color: rgba(33, 33, 33, 1);
+    line-height: pr(34px);
+  }
+}
+.record-operator {
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  padding: pr(50px) 0;
+  position: relative;
+  .icon {
+    width: pr(40px);
+    height: pr(40px);
+    margin-right: pr(16px);
+    position: absolute;
+    left: pr(217px);
+  }
+  .telecom {
+    background: url(../images/telecom.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .txt {
+    font-size: pr(30px);
+    line-height: pr(40px);
+    font-weight: bold;
+    color: rgba(33, 33, 33, 1);
+  }
+}
+.record-price {
+  font-size: pr(48px);
+  line-height: pr(48px);
+  font-weight: bold;
+  color: rgba(33, 33, 33, 1);
+  text-align: center;
+  padding-bottom: pr(40px);
+  background: rgba(255, 255, 255, 1);
+}
+.record-state {
+  font-size: pr(30px);
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+  line-height: pr(32px);
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+.record-msg {
+  padding: pr(40px) pr(30px);
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: pr(30px);
+  li {
+    @extend .space-between;
+    align-items: start;
+    font-size: pr(30px);
+    margin-bottom: pr(30px);
+    .msg-l {
+      color: rgba(153, 153, 153, 1);
+    }
+    .msg-r {
+      color: rgba(33, 33, 33, 1);
+      width: 72%;
+      text-align: right;
+      @include ells(2);
+      .num {
+        color: #5895ff;
+        text-decoration: underline;
+      }
+      .return {
+        width: pr(18px);
+        height: pr(34px);
+        background: url(../images/return.png) no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        transform: rotate(180deg);
+      }
+      .text {
+        vertical-align: middle;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.record-highlight {
+  li {
+    .msg-l {
+      color: rgba(33, 33, 33, 1);
+    }
+    .msg-r {
+      flex: 1;
+    }
+  }
+}
+.record-hint {
+  padding: pr(40px) pr(30px);
+  font-size: pr(24px);
+  line-height: pr(32px);
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  background:rgba(255,255,255,1);
+  text-align: center;
 }
