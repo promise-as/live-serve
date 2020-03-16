@@ -67,7 +67,7 @@ body {
   font-size: pr(30px);
 }
 .input-box {
-  width: pr(574px);
+  width: 80%;
   height: pr(60px);
   border: 1px solid rgba(238, 238, 238, 1);
   border-radius: pr(30px);
@@ -137,32 +137,53 @@ body {
 }
 .headline {
   padding: pr(20px) pr(30px);
-  @extend .space-between;
   border-bottom: 1px solid #f0f2f5;
+  background: #fff;
+  text-align: center;
+  position: relative;
   .return {
     width: pr(18px);
     height: pr(34px);
     background: url(../images/return.png) no-repeat;
     background-size: 100% 100%;
+    position: absolute;
+    left: pr(30px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
   .text {
     font-size: pr(36px);
     font-weight: bold;
     color: rgba(33, 33, 33, 1);
     line-height: pr(34px);
+    em {
+      font-size: pr(24px);
+    }
   }
   .log {
     font-size: pr(30px);
     font-weight: 500;
     color: rgba(33, 33, 33, 1);
     line-height: pr(34px);
+    position: absolute;
+    right: pr(30px);
   }
   .query {
-    display: inline-block;
     width: pr(36px);
     height: pr(36px);
     background: url(../images/query.png) no-repeat;
     background-size: 100% 100%;
+    position: absolute;
+    right: pr(30px);
+  }
+  .finish {
+    font-size: pr(30px);
+    font-weight: 500;
+    color: #5895ff;
+    line-height: pr(34px);
+    position: absolute;
+    right: pr(30px);
   }
 }
 .mobile-number {
@@ -360,22 +381,6 @@ body {
 .sussess-wrap {
   background: rgba(246, 246, 246, 1);
 }
-.success-head {
-  padding: pr(24px) pr(30px);
-  font-size: pr(36px);
-  line-height: pr(36px);
-  font-weight: bold;
-  color: rgba(33, 33, 33, 1);
-  text-align: center;
-  background: rgba(255, 255, 255, 1);
-  border-bottom: 1px solid #f0f2f5;
-  .finish {
-    font-size: pr(30px);
-    color: rgba(88, 149, 255, 1);
-    position: absolute;
-    right: pr(30px);
-  }
-}
 .success-query {
   padding: pr(30px) 0;
   font-size: pr(24px);
@@ -553,6 +558,213 @@ body {
   line-height: pr(32px);
   font-weight: 500;
   color: rgba(153, 153, 153, 1);
-  background:rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   text-align: center;
+}
+
+// tag-remark.html
+.tag-wrap {
+  background: rgba(246, 246, 246, 1);
+}
+.tag-in {
+  background: #fff;
+  padding: pr(30px) pr(30px) 0;
+  .icon {
+    display: inline-block;
+    width: pr(25px);
+    height: pr(34px);
+    margin-right: pr(20px);
+    vertical-align: middle;
+  }
+  .icon-tag {
+    background: url(../images/tag_1.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .icon-remark {
+    width: pr(26px);
+    height: pr(37px);
+    background: url(../images/tag_2.png) no-repeat;
+    background-size: 100% 100%;
+  }
+  .text {
+    font-size: pr(36px);
+    line-height: pr(36px);
+    font-weight: 500;
+    color: rgba(33, 33, 33, 1);
+    vertical-align: middle;
+  }
+  .tag-box {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-size: pr(30px);
+    padding-bottom: pr(20px);
+  }
+  .remark-box {
+    padding-top: pr(20px);
+  }
+}
+.tag-list {
+  padding-top: pr(30px);
+  li {
+    display: inline-block;
+    padding: pr(6px) pr(12px);
+    border: 1px solid #3699ff;
+    border-radius: pr(6px);
+    margin: 0 pr(10px) pr(20px) 0;
+    color: #3699ff;
+  }
+  span {
+    display: inline-block;
+    font-size: pr(30px);
+    font-weight: 500;
+    vertical-align: middle;
+  }
+  .icon {
+    width: pr(23px);
+    height: pr(23px);
+    background: url(../images/close_1.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0;
+    margin-left: pr(10px);
+  }
+  .sel {
+    background: #3699ff;
+    color: #fff;
+  }
+}
+.tag-good {
+  margin-bottom: pr(30px);
+  padding-bottom: pr(20px);
+}
+.tag-img {
+  padding: pr(50px);
+  background: #fff;
+  .add-img {
+    height: pr(282px);
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-radius: pr(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: pr(40px);
+    }
+    .txt {
+      font-size: pr(30px);
+      font-weight: 500;
+      color: rgba(153, 153, 153, 1);
+      line-height: pr(32px);
+      padding-top: pr(30px);
+    }
+  }
+}
+
+// deal-record.html
+.deal {
+  background: rgba(246, 246, 246, 1);
+  position: relative;
+  height: 100%;
+}
+.deal-title {
+  text-align: center;
+  font-size: pr(24px);
+  line-height: pr(32px);
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  padding: pr(30px) 0;
+  .month {
+    margin-right: 1em;
+  }
+}
+.deal-list {
+  padding: 0 pr(25px);
+  background: #fff;
+  .item {
+    @extend .space-between;
+    border-bottom: 1px solid #eee;
+    padding: pr(30px) 0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .item-col {
+    line-height: pr(32px);
+    font-weight: 500;
+  }
+  .col-title {
+    font-size: pr(30px);
+    color: rgba(33, 33, 33, 1);
+    margin-bottom: pr(20px);
+  }
+  .txt {
+    font-size: pr(24px);
+    color: rgba(153, 153, 153, 1);
+  }
+}
+.deal-btn {
+  width: 100%;
+  font-size: pr(36px);
+  line-height: pr(100px);
+  font-weight: 500;
+  color: rgba(54, 153, 255, 1);
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+// recharge-bill.html
+.bill {
+  background: rgba(246, 246, 246, 1);
+  position: relative;
+  height: 100%;
+}
+.bill-banner {
+  height: pr(236px);
+}
+.bill-title {
+  padding: pr(10px) pr(30px) pr(20px);
+  line-height: pr(32px);
+  font-weight: 500;
+  font-size: pr(24px);
+  .month {
+    color: rgba(33, 33, 33, 1);
+  }
+  span {
+    color: rgba(153, 153, 153, 1);
+    margin-right: 2em;
+  }
+}
+.bill-list {
+  padding: pr(30px) pr(25px);
+  background: #fff;
+  .item {
+    @extend .space-between;
+    .icon {
+      width: pr(100px);
+      height: pr(100px);
+      background: url(../images/mobile-icon.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .item-msg {
+      .msg-title {
+        font-size: pr(30px);
+        line-height: pr(32px);
+        font-weight: 500;
+        color: rgba(33, 33, 33, 1);
+      }
+    }
+  }
+}
+.bill-btn {
+  width: 100%;
+  font-size: pr(36px);
+  line-height: pr(100px);
+  font-weight: 500;
+  color: rgba(54, 153, 255, 1);
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }

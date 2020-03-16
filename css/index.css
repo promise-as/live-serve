@@ -6,7 +6,7 @@ input[type="text"]:-moz-placeholder, select:-moz-placeholder { color: #999; font
 input[type="text"]::-moz-placeholder, select::-moz-placeholder { color: #999; font-size: inherit; }
 input[type="text"]:-ms-input-placeholder, select:-ms-input-placeholder { color: #999; font-size: inherit; }
 
-.space-between, .live-head, .headline, .mobile-number, .mobile-bar, .affirm-payment .list li, .flow-privilege, .record-msg li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.space-between, .live-head, .mobile-number, .mobile-bar, .affirm-payment .list li, .flow-privilege, .record-msg li, .deal-list .item, .bill-list .item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .space-around { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: distribute; justify-content: space-around; }
 
@@ -16,7 +16,7 @@ html, body { height: 100%; }
 
 .go-home { color: #999; font-size: 0.4rem; }
 
-.input-box { width: 7.6533333333rem; height: 0.8rem; border: 1px solid #eeeeee; border-radius: 0.4rem; }
+.input-box { width: 80%; height: 0.8rem; border: 1px solid #eeeeee; border-radius: 0.4rem; }
 .input-box input { vertical-align: middle; }
 .input-box input[type="submit"] { width: 0.32rem; height: 0.3333333333rem; background: url(../images/search.png) no-repeat center; background-size: 100% 100%; text-indent: -9999px; margin: 0 0.16rem 0 0.2666666667rem; }
 .input-box input[type="text"] { width: 84%; height: 100%; }
@@ -35,11 +35,13 @@ html, body { height: 100%; }
 
 .mobile-wrap, .affirm-wrap, .sussess-wrap { height: 100%; position: relative; }
 
-.headline { padding: 0.2666666667rem 0.4rem; border-bottom: 1px solid #f0f2f5; }
-.headline .return { width: 0.24rem; height: 0.4533333333rem; background: url(../images/return.png) no-repeat; background-size: 100% 100%; }
+.headline { padding: 0.2666666667rem 0.4rem; border-bottom: 1px solid #f0f2f5; background: #fff; text-align: center; position: relative; }
+.headline .return { width: 0.24rem; height: 0.4533333333rem; background: url(../images/return.png) no-repeat; background-size: 100% 100%; position: absolute; left: 0.4rem; top: 0; bottom: 0; margin: auto; }
 .headline .text { font-size: 0.48rem; font-weight: bold; color: #212121; line-height: 0.4533333333rem; }
-.headline .log { font-size: 0.4rem; font-weight: 500; color: #212121; line-height: 0.4533333333rem; }
-.headline .query { display: inline-block; width: 0.48rem; height: 0.48rem; background: url(../images/query.png) no-repeat; background-size: 100% 100%; }
+.headline .text em { font-size: 0.32rem; }
+.headline .log { font-size: 0.4rem; font-weight: 500; color: #212121; line-height: 0.4533333333rem; position: absolute; right: 0.4rem; }
+.headline .query { width: 0.48rem; height: 0.48rem; background: url(../images/query.png) no-repeat; background-size: 100% 100%; position: absolute; right: 0.4rem; }
+.headline .finish { font-size: 0.4rem; font-weight: 500; color: #5895ff; line-height: 0.4533333333rem; position: absolute; right: 0.4rem; }
 
 .mobile-number { margin: 0 0.4rem; padding: 0.4rem 0; border-bottom: 1px solid #f0f2f5; }
 .mobile-number .rec-input { width: 60%; }
@@ -84,9 +86,6 @@ html, body { height: 100%; }
 
 .sussess-wrap { background: #f6f6f6; }
 
-.success-head { padding: 0.32rem 0.4rem; font-size: 0.48rem; line-height: 0.48rem; font-weight: bold; color: #212121; text-align: center; background: white; border-bottom: 1px solid #f0f2f5; }
-.success-head .finish { font-size: 0.4rem; color: #5895ff; position: absolute; right: 0.4rem; }
-
 .success-query { padding: 0.4rem 0; font-size: 0.32rem; line-height: 0.4266666667rem; font-weight: 500; background: white; text-align: center; }
 .success-query .text { color: #5895ff; }
 
@@ -128,5 +127,56 @@ html, body { height: 100%; }
 .record-highlight li .msg-r { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .record-hint { padding: 0.5333333333rem 0.4rem; font-size: 0.32rem; line-height: 0.4266666667rem; font-weight: 500; color: #999999; background: white; text-align: center; }
+
+.tag-wrap { background: #f6f6f6; }
+
+.tag-in { background: #fff; padding: 0.4rem 0.4rem 0; }
+.tag-in .icon { display: inline-block; width: 0.3333333333rem; height: 0.4533333333rem; margin-right: 0.2666666667rem; vertical-align: middle; }
+.tag-in .icon-tag { background: url(../images/tag_1.png) no-repeat; background-size: 100% 100%; }
+.tag-in .icon-remark { width: 0.3466666667rem; height: 0.4933333333rem; background: url(../images/tag_2.png) no-repeat; background-size: 100% 100%; }
+.tag-in .text { font-size: 0.48rem; line-height: 0.48rem; font-weight: 500; color: #212121; vertical-align: middle; }
+.tag-in .tag-box { width: 100%; border-bottom: 1px solid #eee; font-size: 0.4rem; padding-bottom: 0.2666666667rem; }
+.tag-in .remark-box { padding-top: 0.2666666667rem; }
+
+.tag-list { padding-top: 0.4rem; }
+.tag-list li { display: inline-block; padding: 0.08rem 0.16rem; border: 1px solid #3699ff; border-radius: 0.08rem; margin: 0 0.1333333333rem 0.2666666667rem 0; color: #3699ff; }
+.tag-list span { display: inline-block; font-size: 0.4rem; font-weight: 500; vertical-align: middle; }
+.tag-list .icon { width: 0.3066666667rem; height: 0.3066666667rem; background: url(../images/close_1.png) no-repeat; background-size: 100% 100%; margin-right: 0; margin-left: 0.1333333333rem; }
+.tag-list .sel { background: #3699ff; color: #fff; }
+
+.tag-good { margin-bottom: 0.4rem; padding-bottom: 0.2666666667rem; }
+
+.tag-img { padding: 0.6666666667rem; background: #fff; }
+.tag-img .add-img { height: 3.76rem; border: 1px solid #cccccc; border-radius: 0.08rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.tag-img .add-img input { width: 0.5333333333rem; }
+.tag-img .add-img .txt { font-size: 0.4rem; font-weight: 500; color: #999999; line-height: 0.4266666667rem; padding-top: 0.4rem; }
+
+.deal { background: #f6f6f6; position: relative; height: 100%; }
+
+.deal-title { text-align: center; font-size: 0.32rem; line-height: 0.4266666667rem; font-weight: 500; color: #999999; padding: 0.4rem 0; }
+.deal-title .month { margin-right: 1em; }
+
+.deal-list { padding: 0 0.3333333333rem; background: #fff; }
+.deal-list .item { border-bottom: 1px solid #eee; padding: 0.4rem 0; }
+.deal-list .item:last-child { border-bottom: none; }
+.deal-list .item-col { line-height: 0.4266666667rem; font-weight: 500; }
+.deal-list .col-title { font-size: 0.4rem; color: #212121; margin-bottom: 0.2666666667rem; }
+.deal-list .txt { font-size: 0.32rem; color: #999999; }
+
+.deal-btn { width: 100%; font-size: 0.48rem; line-height: 1.3333333333rem; font-weight: 500; color: #3699ff; background: #fff; text-align: center; position: absolute; bottom: 0; }
+
+.bill { background: #f6f6f6; position: relative; height: 100%; }
+
+.bill-banner { height: 3.1466666667rem; }
+
+.bill-title { padding: 0.1333333333rem 0.4rem 0.2666666667rem; line-height: 0.4266666667rem; font-weight: 500; font-size: 0.32rem; }
+.bill-title .month { color: #212121; }
+.bill-title span { color: #999999; margin-right: 2em; }
+
+.bill-list { padding: 0.4rem 0.3333333333rem; background: #fff; }
+.bill-list .item .icon { width: 1.3333333333rem; height: 1.3333333333rem; background: url(../images/mobile-icon.png) no-repeat; background-size: 100% 100%; }
+.bill-list .item .item-msg .msg-title { font-size: 0.4rem; line-height: 0.4266666667rem; font-weight: 500; color: #212121; }
+
+.bill-btn { width: 100%; font-size: 0.48rem; line-height: 1.3333333333rem; font-weight: 500; color: #3699ff; background: #fff; text-align: center; position: absolute; bottom: 0; }
 
 /*# sourceMappingURL=index.css.map */
